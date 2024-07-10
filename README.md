@@ -13,7 +13,7 @@
 - **Recommended Professors**: Gibson, <b>Messer</b>, Mike Meyers. [link for messer 701 playlist](https://www.youtube.com/watch?v=KiEptGbnEBc&list=PLG49S3nxzAnl4QDVqK-hOnoqcSKEIDDuv)
 - **Jason Dion**: His Udemy practice exams are highly recommended.
 
-### CompTia community advice
+### CompTIA community advice
 
 - **Engaging in to cybersecurity**: "Not sure if that had stuck if I hadn't been interested in Security long before I started studying for the Sec+. For years I've been watching Blackhat keynotes, reading articles about breaches, I get alerts from NIST, CISA, and Google alerts about breaches and ransomware attacks. I play around with basic pen testing tools, have a home lab, have taken a crap load of Cybrary courses, and so on and so on".
 
