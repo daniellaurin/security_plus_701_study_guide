@@ -10,7 +10,7 @@
 
 ### Professors and Practice Exams
 
-- **Recommended Professors**: Gibson, <b>Messer</b>, Mike Meyers.
+- **Recommended Professors**: Gibson, <b>Messer</b>, Mike Meyers. [link for messer 701 playlist](https://www.youtube.com/watch?v=KiEptGbnEBc&list=PLG49S3nxzAnl4QDVqK-hOnoqcSKEIDDuv)
 - **Jason Dion**: His Udemy practice exams are highly recommended.
 
 ### CompTia community advice
