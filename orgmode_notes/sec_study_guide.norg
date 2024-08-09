@@ -1,12 +1,10 @@
 @document.meta
 title: sec-study-guide
-description: Sec+ Study Guide + Ressources  
+description: Study Guide + Ressources  
 authors: dlaurin
-categories: [
-  Security+
-]
+categories: Security+
 created: 2024-04-01T23:59:12-0500
-updated: 2024-07-09T23:17:07-0500
+updated: 2024-08-09T16:31:58-0500
 version: 1.1.1
 @end
 
