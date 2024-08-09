@@ -1,0 +1,46 @@
+@document.meta
+title: sec-study-guide
+description: Sec+ Study Guide + Ressources  
+authors: dlaurin
+categories: [
+  Security+
+]
+created: 2024-04-01T23:59:12-0500
+updated: 2024-07-09T23:17:07-0500
+version: 1.1.1
+@end
+
+* Study-guide
+** Tips 
+  Proffessor Messer 
+   This is for labs => https://labsdigest.com/
+   to find free ressources => https://www.cybersecuritycentral.org/home 
+   Hands on training => https://www.cyberwarrior.com/security-plus/
+   GCGA
+   "I skipped the PBQ's like everyone says to"
+   Proffessor => Gibson, Messer, Mike Meyers, Dion, 
+   Jason Dion practice exams (udemy)
+
+   Things to memorize: "Immediately write down your notes from the flash cards on the white board.
+   Especially the OSI model and ports, how to calculate ARO, SLE, EF and Cryptography sections. 
+   Remember: integrity=hash. And the CIA TRIAD, and AES=ccmp".
+  
+   Cybersecurity community things: "Not sure if that had stuck if I hadn't been interested in Security long before I started studying for the Sec+.
+   For years I've been watching Blackhat keynotes, reading articles about breaches,
+   I get alerts from NIST, CISA, and Google alerts about breaches and ransomware attacks.
+   I play around with basic pen testing tools, have a home lab, have taken a crap load of Cybrary courses, and so on and so on".
+
+   "Leo Laporte/TWIT or even Steve Gibson (although a somewhat hard to follow guy. An obvious high IQ type)"
+  
+   "Study bank by Chapple and seidl, prof dion practice quizzes, Quizlet to memorize port numbers and dojolabs to work on the simulated labs".
+
+
+*** Things to look into
+    Google certificate course on coursera 
+    Remember that interview video with josh madakor and sys admin junior 
+
+    Exam objectives => https://www.comptia.jp/pdf/Security%2B%20SY0-501%20Exam%20Objectives.pdf
+
+*** Study Material 
+    https://quizlet.com/343931988/port-names-and-numbers-security-501-flash-cards/
+    https://quizlet.com/648931527/tough-sec-terms-flash-cards/

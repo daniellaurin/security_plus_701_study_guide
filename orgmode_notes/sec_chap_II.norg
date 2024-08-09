@@ -1,0 +1,91 @@
+* Security+
+** Management 
+*** Configuration management 
+    - Identify and document 
+    - Diagrams: Network diagrams, physical data center layout, device diagrams 
+    - Baseline config: Firewall settings, patch levels, OS file versions
+    - Perform an integrity measurement check - to ensure your baseline is good 
+    - ,Standard naming convention,: Tags, computer names - location or region, serial numbers, port labeling, user account names, standard email addresses 
+    - IP schema: Subnets, hosts per subnet, IP ranges, reserved addresses (printers, routers, servers)
+
+*** Protecting data 
+    - A primary job task: An organization is out of business without data
+    - Data sovereignty: Data rules changed per country 
+    - Data obfuscation: Hide the original data
+    - Data encryption: Plaintext, encrypted form is ciphertext 
+    - Confusion: The encrypted data is drastically different than the plaintext 
+    - ,Diffusion,: Any change will give a completely new output 
+    - Data at-rest: Data is on a storage device, you need to encrypt, apply permissions
+    - Data in-transit: Moving through a network 
+    - Data in-use: Data that is being processed - RAM, CPU registers and cache 
+    - Tokenization: Replace sensitive data with a non-sensitive placeholder
+    - Information Rights Management (IRM): Restrict data access to unauthorized persons - prevent copy and paste, control screenshots, manage printing, no editing 
+
+*** DLP
+    - ,Data Loss Prevention, (DLP): Stop the data before the attackers get it - data leakage
+    - Endpoint DLP
+    - Data in use, motion, rest 
+    - USB blocking 
+    - Cloud-based DLP: Prevent file transfers, block malware, block custom defined data strings - unique data you want to protect 
+    - DLP and email: Check inbound and outbound emails 
+    - Inbound: Block keywords, phishing, quarantine email messages 
+    - Outbound: Fake wire transfers, employee information
+
+*** Site Resiliency 
+    - ,Disaster recovery site,: If your building goes through a disaster
+    - Hot site: Duplicate everything, stocked with hardware, buy two of everything
+    - Cold site: Empty building or room with no equipment, no data, just a room you can bring everything over
+    - Warm site: Just enough equipment to get going, still need to bring hardware over 
+
+*** Honeypots
+    - Honeypot: A trap for attackers
+    - ,Honeynets,: More than one honeypot on a network
+    - Fake telemetry: Make fake info to disguise malware and make then look benign to big data system (machine learning)
+    - DNS sinkhole: DNS that hands out incorrect IP addresses, and redirect you 
+    - You can use it as a security tool to redirect and create a report on the attacks, makes an alarm
+
+*** Cloud Infrastructure
+    - Infrastructure as a Service (IaaS): Giving the hardware required to get your services running
+    - Harware as a Service (HaaS): You have more control of your data as you control the hardware 
+    - ,Software as a Service, (SaaS): On demand software where a third party manages the applications
+    - Platform as a Service (PaaS): Gives you the platform to build your own applications, third party have access to the data, the core building blocks
+    - Anything as a Service (XaaS): Any type of service on the cloud, no large upfront costs or ongoing licensing
+
+**** Cloud services
+     - $List of cloud models on the amount of control$: On-premises > IaaS > PaaS > SaaS 
+     - Managed Service Providers (MSP): Manage I.T of customers, network connectivity, backups, growth management
+     - Managed Security Service Provder (MSSP): I.T security, firewall, patch management, emergency response 
+
+*** Cloud Models
+    - ,Public cloud,: Available to everyone over the internet 
+    - Community cloud: Several orgs share the same resources 
+    - Private cloud: Your own virtualized local data center
+    - Hybrid cloud: Buisness with multiple cloud models, a mix of public and private
+
+*** Cloud Design
+    - Edge computing: Process application data on an edge server (no network required)
+    - Fog computing: Not having all the data consololidated to the cloud 
+    - Thin client: A low powered machine that just remotes into the cloud 
+    - Desktop as a service (Daas): Third-party thin client for the cloud 
+    - Function as A Service (FaaS): Applications are seperated into autonomous functions
+    - Virtual Private Cloud (VPC): different pool of ressources/application have their own cloud 
+    - VPC communicate to a transit gateway, a "cloud router" and connect with a VPN
+    - Ressource policies 
+    - Service Intergration and Management (SIAM): managing different services with one interface 
+
+**** Virtualization 
+     - Virtualization: Run many different operating systems on the same hardware
+     - ,Virtual desktop infrastructure, (VDI): Local thin client 
+     - Container: Making a virtual computer to run an application
+     - Monolithic applications: One big application that does everything 
+     - Application Programming Interfaces (API): The connections to the microservice, scalable, resilient, and segmentation 
+
+*** Infrastructure aS Code 
+    - Code that defines servers, network, and applications 
+    - Very modular as it is built the same way every time based on the code 
+    - Software Defined Networking (SDN): seperating control of the network from the actual movement of data 
+    - Control plane and data plane 
+    - Agile: changes can be made dynamically 
+    - Centrally managed 
+    - Automatic deployment 
+    - Software Defined Visibility (SDV): Dynamic deployment of security/network monitoring 

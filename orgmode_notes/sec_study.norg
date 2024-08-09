@@ -1,0 +1,78 @@
+@document.meta
+title: sec-study
+description: Security+ Notes 
+authors: dlaurin
+categories: [
+  Security+
+]
+created: 2024-04-02T00:02:45-0500
+updated: 2024-08-09T14:44:04-0500
+version: 1.1.1
+@end
+
+* Security+ Notes
+** Extra Notes
+   user - forward proxy - internet - reverse proxy - user
+   SSL was replaced by TLS
+   TLS 1.0 was still able to communicate with SSL 3.0 which was deprecated because of POODLE exploit
+   What is IPsec
+   ARP cache saves ARP addresses
+
+
+
+* ANKI Notes
+*** Chapter I 
+    - Normal Flow => The order of stps in a use case
+    - Alternate Flow => use case when conditions chanege or when exceptions occur
+    - Place Order
+    - Post Condition => The action that occurs after the actor triggers the process
+    - Pre Condition => must be met before the execution of use case can begin
+    - Trigger => Start Case
+
+    - access control => Identification, Authentication, Authorization
+    - confidentiality => Identification, Authentication, Authorization
+    - Scalability => manually adding or removing resources
+    - Elasticity => dynamic ressource management
+    - integrity => makes sure that data is not changed
+    - availability => making sure the data is up
+    - fault tolorance => to prevent SPOF
+    - risk => potential negative consequencess of weaknesses
+    - redundancy => be on current security patches
+    - Detective control => detect incidents after they occur
+    - managerial controls => doument orgs sec policies 
+    - security incident
+
+
+    - providing intergrity => hashing techniques
+
+*** Definitions
+    - access control
+    - preventative control
+    - corrective control
+    - compensating control
+    - alternative control 
+    - physical control 
+    - detective control
+    - managerial control 
+    - technical control 
+    - operational control 
+    - deterent control 
+    - environmental control
+    - response control
+
+
+    - CIA Trifecta 
+    - confidnetiality 
+    - integrity
+    - availability
+
+
+    - scalability
+    - elasticity
+
+    IPS => Intrusion Prevention System
+    IDS => Intrusion Detection System
+    SIEM => Security information and event management systems
+
+
+

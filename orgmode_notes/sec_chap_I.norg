@@ -1,0 +1,425 @@
+* Security+ Study
+** Social Engineering
+*** Phishing 
+    - Phishing: Social engineering with a touch of spoofing
+    - ,Typosquatting,: Making hijacking URL's that are very similar to the real URL
+    - ,Pretexting,: Creating a fictional backstory to manipulate and get information 
+
+**** Pharming
+     - Redirection a legit website to a bogus site
+     -- Example of pharming: Poisoned DNS server
+
+     ---
+
+
+    - Vishing: Voice phishing is done over phone or voicemail
+    - Smishing: SMS phishing is done by text message
+    - Spear phishing: Targeted phishing with inside information 
+    - Whaling: Targeted attack to a large catch 
+
+*** Impersonation 
+    - Impersonation: Attackers pretend to be someone they aren't 
+    - Eliciting information: cohesive: Extracting information from the victim
+    - Identity fraud: Your identity can be used by others 
+
+*** Watering Hole
+    - Watering hole attack: Attacking third party, for the victim to come to you 
+
+**** Executing the watering hole attack:
+     - Educated guess: local coffee or sandwich shop 
+     - Industry-related sites 
+     - Infect all visitors (but you're looking for a specific victim)
+     - Prevention: Use next-gen firewall and IPS 
+
+*** Spam
+    - Spam: Unsolicited messages
+    - Spam over Instant Messaging (SPIM)
+    - ,Mail gateways,: Filters emails before it reaches the end user
+
+**** Identifying spam
+     - Allowed list: Only receive email from trusted senders
+     - SMTP standard checking: Blocks anything that doesn't follow RFC standards
+     - Reverse DNS - (rDNS): Block email where the sender's domain doesn't match the IP address
+     - ,Tarpitting,: Intentionally slow down the server conversation
+     - Recipient filtering: Block all email not addressed to a valid recipient email address 
+
+*** Hacking Public Opinion
+    - Influence campaigns: Sway public opinion on political and social issues
+    - Nation-state actors: Divide, distract, and persuade
+    - Advertising is an option
+    - Enabled through Social media
+    - Hybrid warfare: Wage war non-traditionally 
+    - Cyberwarfare: Attack an entity with technology
+    - ,Computer hoaxes, || Virus hoax: A threat that doesn't actually exist
+    - De-hoaxing: Don't believe no one
+
+*** Other Social Engineering Attacks
+    - Tailgating: Use an authorized person to gain unauthorized access to a building
+
+**** Prevention for tailgating:
+     - Policy for visitors 
+     - One scan, one person 
+     - Access Control Vestibule/Airlock
+
+     ---
+
+    - Dumpster diving: Fence your dumpster to prevent it
+    - Shoulder surfing: Use a privacy filter to prevent it
+    - Invoice scams: A spear phishing attack, to someone that pays the bills
+    - Credential harvesting: Attackers collect login credentials - usually uses malicious software or macro
+
+*** Principles
+    - Authority
+    - Intimidation
+    - Consensus/Social-Proof
+    - Scarcity
+    - Urgency
+    - Familiarity/Liking
+    - Trust
+
+** Malware
+*** Types of Malware
+    - Malicious software
+    - Gather information
+    - Participate in a malicious group
+    - Show you advertising
+
+*** Methods of Malware
+    - Viruses
+    - Crypto-malware
+    - Worms
+    - Trojan Horse
+    - Rootkit
+    - Keylogger
+    - Adware/Spyware
+    - Botnet
+    - ,Drive-by download,: Encourage your victim to download the virus and run for them
+
+*** Virus
+    - Virus needs human intervention
+
+**** Types:
+     - Program viruses
+     - Boot sector viruses
+     - Script viruses
+     - Macro viruses
+     - Fileless virus: Usually when you click a malicious link
+
+*** Ransomware
+    - Personally Identifiable Information (PII)
+    - Crypto-malware
+    - Prevention: Make backups offline
+
+*** Trojan Horse
+    - Potentially Unwanted Program (PUP): undesirable software
+    - Backdoors: Skips through authentication methods
+    - Remote Access Trojans (RATs): Third-party access tool to get admin access of your computer
+
+*** Rootkits
+    - Modifies the kernel
+    - Example: Zeus/Zbot malware
+    - UEFI vulnerability
+
+*** Spyware
+    - Adware: Pop-ups 
+    - Spyware can trick you into installing peer-to-peer, fake security software
+    - Browser monitoring
+    - Keylogger 
+
+*** Bots
+    - Usually form from Trojan horses, OS application vulnerability
+    - Botnets use ,Command and Control, (C&C) server, waits for instructions
+    - Used for DDoS attacks
+
+*** Logic Bomb
+    - Time bomb: Activates on a specific time or date
+    - User event logic bomb
+    - Difficult to identify as it usually deletes itself
+    - SCADA networks are vulnerable
+    - Prevention: Software like Tripwire
+
+** Attacks
+*** Passwords
+    - Hashing: A message digest, or "fingerprint"
+    - Dictionary attack: To find common words 
+    - Rainbow tables: Pre-built set of hashes
+    - Salt: Added extra data to the password hashing
+
+*** Physical 
+    - ,Human Interface Device, (HID): Connecting a keyboard or mouse, something that does not need extra permissions
+    - Malicious flash drive can act like a HID
+    - Macroviruses
+    - Skimming
+    - Card cloning: Only works with magnetic stripe, the chip can't be cloned
+
+*** Types of IT Security
+    - On-premises data: Full control, system checks can be fast, equipment takes time to setup or update
+    - Cloud-based data: Third-party have access to your data, not customizable
+
+*** Cryptographic 
+    - Cryptographic attack: Attackers can break the safe without having the key
+    - ,Birthday attack,: Called a hash collision, there is a chance that hash value can be the same in a plaintext
+    - Downgrade attack: Influence for their security to downgrade their systems
+
+*** Privilege Escalation
+    - High priority vulnerability: needs to be patched quickly
+    - Horizontal privilege escalation: Getting access to sensitive information at the same level of privilege
+
+**** Safeguards
+     - Only let certain apps run in data executable areas 
+     - Randomized memory storage, randomize the location of the executable files are in the RAM
+
+*** XSS
+    - Cross-Site Scripting (XSS): Can share one site could be shared with another
+    - Uses JS as malicious code 
+    - Reflected XSS attack: Run scripts in user inputs (search fields), like running scripts in embedded URLs
+    - Usually steals: Credentials/session IDs/cookies 
+    - Stored XSS attack: Embedded into a post on a social network, anyone who views the post gets infected and can propagate further
+    - Cross-site request: Most of your website from your browser comes from different sources (pictures, videos, etc)
+    - Client side and server side
+    - ,Cross-Site Request Forgery, (XSRF, CSRF): One-click attack, session riding, takes advantage of the trust that a web application has for the user
+    - Server-Side Request Forgery (SSRF): Having the web server do some of the work for you on the attack, needs a vulnerable app on the web server
+    - Prevention: Web Application Firewall (WAF)
+
+*** Code Injection
+    - Adding code into a data stream
+    - XML injection: For a set of rules for data transfer and storage
+    - LDAP injection: Application results/database
+    - DLL injection: Windows library 
+
+*** Buffer Overflow
+    - Spills over into other memory areas
+
+*** Replay Attack
+    - Getting access to useful information transmitted over the network
+    - ARP poisoning
+    - Network tap
+    - Replay Attack: Replay the data to appear as someone else, does not require the original workstation
+    - Pass the hash: Capture a session and pass it to the server as your own, to prevent this use a unique session ID with salting
+    - Cookies may store session IDs
+    - ,Session Hijacking, (sidejacking): Getting access to a session ID to a web browser 
+    - Prevention: Always do end-to-end encryption
+
+*** Driver Attacks 
+    - Zero-day attacks 
+    - Drivers are high exploit target
+    - ,Shimming,: inserting a small piece of code between an application and the operating system 
+      like backwards compatibility with previous Windows version
+    - Refactoring: Metamorphic malware, different program each time it's downloaded, NOP instructions
+
+*** SSL Stripping
+    - Secure Sockets Layer (SSL): to authenticate a websites identity and have an encrypt connection (deprecated)
+    - ,POODLE,: takes advantage of the fallback to legacy version of SSL 3.0; it perform an eavesdrop attack 
+    - Combines an on-path attack with a downgrade attack 
+    - SSL/Man-in-the-middle, and exploits deprecated protocols to see network traffic
+
+*** Race Condition
+    - When multiple programs run or change at the same time, steps of a linear process can be broken, making a cascading effect
+    - Time-Of-Check to Time-Of-use attack (TOCTOU)
+
+*** Memory Attacks
+    - Memory vulnerabilities
+    - Memory leak: Unused memory is not properly released, growing in size and eventually uses all memory, causing system crash
+    - Null pointer dereference: When a pointer points to nothing 
+    - Integer overflow: Static memory allocations being full
+    - Directory traversal 
+    - Improper error handling 
+    - Improper input handling
+    - API attack: Exploit the API request and not the webserver request
+    - ,Denial of Service, (DoS): Prevent access from a device 
+    - Zip bomb 
+    - DHCP starvation
+
+*** Wireless Attack
+    - ,Rogue access point,: Bringing a network device on a network, this opens a backdoor to the network 
+    - 802.1X: Requires authentication to go on the network
+    - Wireless evil twins: Looks legitimate, but actually malicious with a similar SSID to its victim, usually public hotspots
+    - Wireless disassociation attack: Losing connection on a wireless network, wireless DoS attack
+    - 802.11 management frames: Finding an access point, QoS and there is no protection on these frames 
+    - Disassociation attack is patched with 802.11w and is required in 802.11ac
+
+    - ,Radio Frequency, (RF) jamming: Prevents wireless communication
+    -- Sometimes not intentional like a microwave 
+
+    - Fox hunting: Trying to hunt down the jam with a directional antenna, attenuator
+
+*** RFID and NFC 
+    - Radio-Frequency Identification (RFID): Protocol used for something that needs to be tracked
+    - Bidirectional communication: Tag can be battery powered 
+    - Attacks: Replay attack, spoof the reader can modify data to the tag, DoS, decrypt communication
+    - Near Field Communication (NFC): Protocol built on-top of RFID and is one-way, Short range with encryption support
+    - Can be attacked by: Remote capture (10 meters away), RF jamming, replay attack, device control (if you lose the device)
+
+*** Bluetooth Attack
+    - Bluejacking: Sending of unsolicited messages to another device with Bluetooth, 10 meters, can't access data
+    - Bluesnarfing: Can access data when a device has Bluetooth on 
+
+*** Cryptography 
+    - ,Nonce,: A random or pseudo-random number, can't really be guessed or be a counter
+    - Used during a login process 
+    - Server sends a nonce - calculate your password hash - password hash is sent to the host 
+    - Example is an Initialization Vector (IV)
+    - ,Salting,: adding a unique random string of characters before the password hash
+
+*** On-path Attack
+    - ,Man-in-the-middle attack,: Sits in the middle and can be able to change information, redirect
+    - ARP poisoning: You need to be on a local network
+    - Man-in-the-browser: Lets malware do all the proxy work, you are able to see data before it is encrypted
+
+*** MAC Addresses
+    - MAC flooding: Adding too many addresses to a table, attackers can collect network traffic
+    - Broadcast storm: Stopping the STP protocol 
+    - MAC cloning: Match an existing device on a network, they can use it for DoS 
+
+*** DNS Attacks
+    - ,DNS Poisoning,: Modifying the host file on DNS queries, or to redirect to a different IP address 
+    - You can modify the domain information of the server, with brute force or social engineering 
+    - URL hijacking, typosquatting: e.g., googl.com
+
+*** DoS
+    - Overload the service 
+    - Precursor of another attack 
+    - "Friendly" DoS: Accidentally downloading something too big 
+    - Distributed Denial of Service (DDoS): Use of a botnet to do a DoS attack
+    - ,DDoS amplification,: Using protocols that have little authentication or checks, NTP, DNS, ICMP
+    - Ping of Death (PoD)
+
+*** Misc Attacks
+    - Poisoning the AI training data 
+    - Evasion attack: AI can be fooled and release confidential information that is part of its training data
+    - Supply chain attacks: Attackers can affect along the way to its victim
+
+** Intelligence
+*** Threat Actors
+    - Threat actor: Entity responsible for an event that has an impact on the safety of another entity
+    - ,Advanced Persistent Threat, (APT): Usually undetected 
+
+**** Types 
+     - Insiders
+     - Nation states 
+     - Hacktivists
+     - Script kiddies 
+     - Organized crime
+
+     ---
+
+    - ,Shadow IT,: Working around the internal IT department 
+
+*** Attack Vectors
+    - Physical access: Keylogger, transfer files, DoS
+    - Wireless: Login credentials, rogue access, evil twin, protocol vulnerability
+    - Email: Phishing, malware, social engineering 
+    - Supply chain attack 
+    - Social media attack: OSINT, social engineering
+    - Removable media attack: Circumvent air-gapped networks
+    - Cloud attack: Misconfiguration, brute force, phishing, orchestration attack (make your attack vector use resources), DoS
+
+*** Threat Intelligence
+    - ,Open-Source Intelligence, (OSINT): 
+
+**** Vulnerability databases
+     - Common Vulnerabilities and Exposures (CVE): Made by Homeland Security 
+     - U.S. National Vulnerability Database (NVD)
+     - Cyber Threat Alliance (CTA): Validates submissions, makes the process of intelligence faster
+     - Automated Indicator Sharing (AIS): Standard way to share important threat data 
+     - Structured Threat Information Expression (STIX): Standardize the threat report and the information in it
+     - Trusted Automated Exchange of Indicator Information: Securely shares STIX data
+
+     ---
+
+    - Indicators Of Compromise (IOC): Indicates an intrusion in the network
+    - Predictive analysis
+
+*** Threat Research
+    - Sources: Vulnerability feeds, conferences, academic journals, local user groups in your community, social media 
+    - Request For Comments (RFC): ISOC, IETF 
+    - Tactics, Techniques, and Procedures (TTP): How are your threat actors doing it? 
+
+*** Vulnerability Types
+    - Zero-day attacks: Vulnerability has not been detected or published, published as a CVE 
+    - Easy to leave an open door and hackers will exploit it, common with cloud storage
+    - Unsecured root accounts
+    - Errors that give too much information 
+    - Weak encryption
+    - Insecure protocols
+    - ,Mirai botnet,: Takes advantage of default configurations 
+    - Open ports and services 
+    - Improper patch management
+    - Legacy platforms: Like old OS's for apps 
+
+*** Third-party risks
+    - System integration risk: They usually have elevated privileges and have physical access, insider threats
+    - Lack of vendor support: Vendors need to care about fixing security problems 
+    - Supply chain risk: Always maintain local security controls, counterfeit hardware 
+    - Outsourced code development: Use a VPN or cloud-based access, should be isolated, confidentiality like encryption 
+    - Data storage 
+
+*** Threat Hunting
+    - Find the attacker before they find you, you can't see the attack until it happens 
+    - Intelligence fusion: There is an overwhelming amount of security data, many data types, separate teams
+    - Fusing the data: Collect the data, add external sources
+
+*** Vulnerability scans
+    - Port scan 
+    - Identify systems 
+    - Test from the outside and inside 
+    - The scanner looks for everything 
+    - Cross reference with NVD and Microsoft security bulletin
+    - False positives
+    - False negatives
+
+**** Scan types 
+     - Non-intrusive scans: Just gathers information
+     - Intrusive scans: You will try the vulnerabilities 
+     - Non-credentialed scan: The scanner can't login to remote device 
+     - ,Credentialed scan,: You're a normal user, emulates an insider attack
+
+*** SIEM
+    - ,Security Information and Event Management, (SIEM): Logging of security events and information, real-time info, advanced reporting features, "a central repo", forensics
+    - Syslog
+    - SIEM data: Server auth, VPN connections, firewall session logs, denied outbound traffic flows, network utilizations, packet captures
+    - Security monitoring: Automated, sends alerts, monitoring 
+    - Uses big data analytics: Large data stores
+    - User and Entity Behavior Analytics (UEBA): Detects insider threats 
+    - Sentiment analysis: Public opinions of your business 
+    - Security Orchestration, Automation, and Response (SOAR): Automate routine or time-intensive activities
+
+*** Penetration Testing 
+    - Pentest: Simulates an attack
+    - ,NIST guidelines,: For how to do a test 
+    - Rules of engagement: Make everyone aware of the test parameters 
+    - Working knowledge: Blind test, full disclosure, a mix of known and unknown 
+    - Exploiting vulnerabilities: Try to break the system
+
+**** The process
+     - Lateral movement: From system to system 
+     - ,Persistence,: Once you're there, ensure a way back in - like setting up a backdoor or changing passwords
+     - The pivot: Gain access to systems that would normally not be accessible - use a vulnerable system as a proxy or relay 
+
+**** Cleanup
+     - Leave the network in its original state 
+     - Bug bounty 
+
+****** Nist Rules 
+       ~ Rules of engagement 
+       ~ Working knowledge 
+       ~ Exploiting vulnerabilities
+       ~ The process 
+       ~ cleanup
+
+*** Reconnaissance     
+    - Need information before the attack
+    - ,Passive footprinting,: Use from open sources - social media, corporate website, online forums, Reddit, social engineering, dumpster diving, business organizations
+    - OSINT  
+    - ,Wardriving or warflying,: Combine WiFi monitoring and GPS 
+    - Active footprinting: Trying the doors, visible on network traffic and logs, ping scans, port scans, DNS queries, OS scans, OS fingerprinting, service scans, version scans 
+
+*** Security teams 
+    - Red team: Offensive security team, ethical hacking 
+    - Blue team: Defensive security 
+    - Purple team: Both teams share information, they usually have a feedback loop
+    - White team: Not on a side, like referees in a security exercise 
+
+    ===
+___
+
