@@ -1,16 +1,15 @@
 @document.meta
 title: sec-study
-description: Security+ Notes 
+description: Security+ Notes Index
 authors: dlaurin
-categories: [
-  Security+
-]
+categories: Security+
 created: 2024-04-02T00:02:45-0500
-updated: 2024-08-09T14:44:04-0500
+updated: 2024-08-09T15:59:57-0500
 version: 1.1.1
 @end
 
-* Security+ Notes
+* Security+ Notes Index
+  {/ /home/dlaurin/IT/security_plus_701_study_guide/orgmode_notes/}[Chapter I]
 ** Extra Notes
    user - forward proxy - internet - reverse proxy - user
    SSL was replaced by TLS

@@ -1,4 +1,14 @@
-* Security+ Study
+@document.meta
+title: sec_chap_I
+description: Security+ Chapter I
+authors: dlaurin
+categories: Security+
+created: 2024-08-09T15:56:53-0500
+updated: 2024-08-09T16:17:51-0500
+version: 1.1.1
+@end
+
+* Security+ Chapter 1
 ** Social Engineering
 *** Phishing 
     - Phishing: Social engineering with a touch of spoofing
