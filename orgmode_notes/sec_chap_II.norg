@@ -170,3 +170,30 @@ version: 1.1.1
     - False Acceptance Rate (FAR): The statistics of an unauthorized user will be accepted 
     - False rejection rate (FRR): The odds of a authorized use will be rejected
     - Crossover Error Rate (CER): The FAR and FRR should be equal for best use
+
+*** Multi-factor Authentication 
+    - AAA framwork: Identification, Authentication, Authorization
+
+**** Factors
+     - Something you know 
+     - Something you have
+     - Something you are
+
+**** Attributes
+     - Somewhere you are
+     - Something you can do
+     - Something you exhibit
+     - Someone you know
+
+*** Redundancy
+    - Duplicate parts of the system 
+    - Maintain uptime 
+    - Making sure the hardware, software and systems are always available 
+    - Geogrphic dispersal: Disperse technologies to different location like a data center
+    - Multipath I/O: Network redundancy like multiple channels with multiple switches
+    - Redundant Array of Independent Disks (RAID): Data Redundancy with multiples drives
+
+*** Network Redundancy
+    - Load balancing: Checks if the servers are active and redundancy servers are on standby
+    - NIC teaming: Aggeregate the bandwidth between the active and passive path 
+      you install multiple NIC cards and make them act like a single adapter
