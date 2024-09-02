@@ -4,7 +4,7 @@ description: Chapter II
 authors: dlaurin
 categories: Security+ 
 created: 2024-08-09T15:57:51-0500
-updated: 2024-08-09T16:38:49-0500
+updated: 2024-09-02T01:10:54-0500
 version: 1.1.1
 @end
 
@@ -70,7 +70,7 @@ version: 1.1.1
     - ,Public cloud,: Available to everyone over the internet 
     - Community cloud: Several orgs share the same resources 
     - Private cloud: Your own virtualized local data center
-    - Hybrid cloud: Buisness with multiple cloud models, a mix of public and private
+    - Hybrid cloud: Business with multiple cloud models, a mix of public and private
 
 *** Cloud Design
     - Edge computing: Process application data on an edge server (no network required)
@@ -90,12 +90,83 @@ version: 1.1.1
      - Monolithic applications: One big application that does everything 
      - Application Programming Interfaces (API): The connections to the microservice, scalable, resilient, and segmentation 
 
-*** Infrastructure aS Code 
+*** Infrastructure as Code 
     - Code that defines servers, network, and applications 
     - Very modular as it is built the same way every time based on the code 
-    - Software Defined Networking (SDN): seperating control of the network from the actual movement of data 
+    - Software Defined Networking (SDN): Seperating control of the network from the actual movement of data 
     - Control plane and data plane 
-    - Agile: changes can be made dynamically 
+    - Agile: Changes can be made dynamically 
     - Centrally managed 
     - Automatic deployment 
     - Software Defined Visibility (SDV): Dynamic deployment of security/network monitoring 
+
+*** Virtualized Security 
+    Deprovision: Revoking access to a persons account or system
+    - VM are all self-contained
+    - Virtual machine escape: Breaking out of the VM and interact with the host operating system/hardware 
+    - _Pwn2Own hacking contest_, Microsoft edge code exectuion in the edge sandbox 
+
+*** Secure Deployment 
+    - Sandboxing: Isolated testing environment for code
+    - Quality Assurance (QA): Verifies features are working as expected
+    - Staging: Tested in a production like environment
+    - Security baseline: The security of an application environment should be well defined 
+    - Perform intergrity checks for the secure baseline
+    - $Patch Tuesday -> Exploit Wednesday$
+
+*** Provisioning
+    - Provisioning: Making something available
+    - Consider scalability and elasticity 
+    - Orchestration: Entire application instances can be instantly provisioned with the power of automation
+    - Deprovisioning: Dismantling and removing an application instance also, revert all security policies
+
+*** Secure Coding Techniques 
+**** Stored Procedures
+     - To avoid calling directly to the data base =>
+
+     @code sql
+     'SELECTS' * FROM wp_options WHERE option_id = 1' ❌
+     'CALL get_options' ✔️
+     @end
+
+     ---
+
+    - Obfuscation: Taking code and making it not human readable
+    - Code reuse: Reused code for a different application that can have a vulnerability
+    - Dead code: Code that is executed by never is used in the application
+    - Input validation: Making sure you use only the correct characters and certain number of characters
+    - Server-side Validation: all checks occur on the server 
+    - Be mindful of memory management
+    - Be carful with libraries/SDKs 
+    - Version control
+
+**** Software diversity
+     - Everyone's software binaries are all unique and slightly different
+     - Making it that attack will only work on a fraction of the users
+
+*** Automation 
+    - Continuous intergration (CI): Code is constantly written, which causes security problems
+    - Continous delivery (CD): Automate the testing process 
+    - Continuous deployment: Automatically deploy code to production
+
+*** Authentication Methods 
+    - Directory services: Keeping all users in a single database
+    - Kurberos vs LDAP
+    - Federaton: Using third-party credentials to authenticate yourself
+    - Attestation: Making sure that it is the approved hardware to connect to the network
+    - Short Message Service (SMS)
+    - Push notification
+    - Time-based One-Time Password (TOTP)
+    - One-Time Passwords (HOTP): You use a throw away password for everytime you authenticate
+    - HMAC-based One-Time Password algorithm (HMAC): You have a list of password and when you use it you have to discard 
+      and use another password on that list
+
+**** Static Codes
+     - Personal Identification Number (PIN)
+     - Smart Cards (like credit cards)
+
+*** Biometric 
+    - Fingerprint, retinal, Iris, Voice, Facial, Gait, Veins
+    - False Acceptance Rate (FAR): The statistics of an unauthorized user will be accepted 
+    - False rejection rate (FRR): The odds of a authorized use will be rejected
+    - Crossover Error Rate (CER): The FAR and FRR should be equal for best use
