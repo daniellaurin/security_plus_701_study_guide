@@ -197,3 +197,51 @@ version: 1.1.1
     - Load balancing: Checks if the servers are active and redundancy servers are on standby
     - NIC teaming: Aggeregate the bandwidth between the active and passive path 
       you install multiple NIC cards and make them act like a single adapter
+
+*** Power Redundancy 
+    - Uninterruptible Power Supply (UPS): short-term backup power for blackouts, brownouts, surges
+    - generators: long-term power backup
+    - Power Distribution Units (PDUs): A power bank that provides multiple outlets and can monitor power
+
+*** Replicaton 
+**** SAN
+     - Storage Area Netowkrs (SANs): a network that connexts multiple storage devices which have front-ends
+     - SAN snapshot: copy a SAN data and sends it to antother SAN on the network
+
+**** VM replication
+     - you can replicate making sure your VM aer all the same when changed
+
+     ---
+
+    - On premises vs cloud redundancy: speed, money and security shoud be considered
+
+*** Backup Types 
+
+    - File backups: Full, Incremental, Diffentrial
+
+    @table
+    | Type         | Data Selection                                     | Backup/Restore Time                     | Archive Attribute |
+    |--------------+----------------------------------------------------+-----------------------------------------+-------------------|
+    | Full         | All selected data                                  | High/Low (one tape set)                 | Cleared           |
+    | Incremental  | New files and files modified since the last bakcup | Low/High (multiple tape sets)           | Cleared           |
+    | Differential | All data modified since the last full bakcup       | Moderate/Moderate (No more than 2 sets) | Not Cleared       |
+    @end
+
+    - NAS vs SAN: SAN is better
+    - Image: doing an image backup, backups everything, including the operating system
+
+*** Resiliency 
+    - Non-persistence: application instaces are constantly built and torn down 
+    - High availability: Always on, always available
+    - Order of restoration: some applications are more important than others
+
+*** Embedded Systems 
+    - System on a Chip (SoC): multiple components running on a single chip
+    - Field-programmable gate array (FPGA): An intergrated circuit that can configured
+    - SCADA / ICS: computers on industrial equipment, they are not connected to the internet
+    - Internet of Things (IoT)
+    - Voice over Internet Protocol (VoIP)
+    - HVAC
+    - Specialized systems: like medical equipment
+    - Real-Time Operating System (RTOS): an operating system with a determninistic processing schedule
+    - Surveillance systems
