@@ -4,7 +4,7 @@ description: Progress Tracker
 authors: dlaurin
 categories: Security+
 created: 2024-04-02T00:03:40-0500
-updated: 2024-09-03T17:45:46-0500
+updated: 2024-09-03T22:07:59-0500
 version: 1.1.1
 @end
 
@@ -21,7 +21,8 @@ version: 1.1.1
     - Video 72-77 
     - Video 78-80
     - Video 81-85 
-    - Video 86-
+    - Video 86-91
+    - Video 92-
 
 *** Anki
     - 68 cards

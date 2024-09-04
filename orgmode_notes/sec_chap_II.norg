@@ -4,7 +4,7 @@ description: Chapter II
 authors: dlaurin
 categories: Security+ 
 created: 2024-08-09T15:57:51-0500
-updated: 2024-09-02T01:10:54-0500
+updated: 2024-09-03T22:33:47-0500
 version: 1.1.1
 @end
 
@@ -145,13 +145,13 @@ version: 1.1.1
      - Making it that attack will only work on a fraction of the users
 
 *** Automation 
-    - Continuous intergration (CI): Code is constantly written, which causes security problems
+    - ,Continuous intergration (CI),: Code is constantly written, which causes security problems
     - Continous delivery (CD): Automate the testing process 
     - Continuous deployment: Automatically deploy code to production
 
 *** Authentication Methods 
     - Directory services: Keeping all users in a single database
-    - Kurberos vs LDAP
+    - $Kurberos vs LDAP$
     - Federaton: Using third-party credentials to authenticate yourself
     - Attestation: Making sure that it is the approved hardware to connect to the network
     - Short Message Service (SMS)
@@ -169,15 +169,15 @@ version: 1.1.1
     - Fingerprint, retinal, Iris, Voice, Facial, Gait, Veins
     - False Acceptance Rate (FAR): The statistics of an unauthorized user will be accepted 
     - False rejection rate (FRR): The odds of a authorized use will be rejected
-    - Crossover Error Rate (CER): The FAR and FRR should be equal for best use
+    - ,Crossover Error Rate, (CER): The FAR and FRR should be equal for best use
 
 *** Multi-factor Authentication 
-    - AAA framwork: Identification, Authentication, Authorization
+    - ,AAA framwork,: Identification, Authentication, Authorization
 
 **** Factors
-     - Something you know 
-     - Something you have
-     - Something you are
+     - ,Something you know,
+     - ,Something you have,
+     - ,Something you are,
 
 **** Attributes
      - Somewhere you are
@@ -190,34 +190,34 @@ version: 1.1.1
     - Maintain uptime 
     - Making sure the hardware, software and systems are always available 
     - Geogrphic dispersal: Disperse technologies to different location like a data center
-    - Multipath I/O: Network redundancy like multiple channels with multiple switches
+    - ,Multipath I/O,: Network redundancy like multiple channels with multiple switches
     - Redundant Array of Independent Disks (RAID): Data Redundancy with multiples drives
 
 *** Network Redundancy
     - Load balancing: Checks if the servers are active and redundancy servers are on standby
-    - NIC teaming: Aggeregate the bandwidth between the active and passive path 
-      you install multiple NIC cards and make them act like a single adapter
+    - $NIC teaming$: Aggeregate the bandwidth between the active and passive path 
+      you install multiple NIC cards and make them act like a single adapter (different from etherchannel)
 
 *** Power Redundancy 
     - Uninterruptible Power Supply (UPS): short-term backup power for blackouts, brownouts, surges
-    - generators: long-term power backup
+    - Generators: long-term power backup
     - Power Distribution Units (PDUs): A power bank that provides multiple outlets and can monitor power
 
 *** Replicaton 
 **** SAN
-     - Storage Area Netowkrs (SANs): a network that connexts multiple storage devices which have front-ends
-     - SAN snapshot: copy a SAN data and sends it to antother SAN on the network
+     - ,Storage Area Networks (SANs),: A network that connects multiple storage devices which have front-ends
+     - SAN snapshot: Copy a SAN data and sends it to antother SAN on the network
 
 **** VM replication
-     - you can replicate making sure your VM aer all the same when changed
+     - you can replicate making sure your VM are all the same when changed
 
      ---
 
-    - On premises vs cloud redundancy: speed, money and security shoud be considered
+    - On premises vs cloud redundancy: Speed, money and security shoud be considered
 
 *** Backup Types 
 
-    - File backups: Full, Incremental, Diffentrial
+    - File backups: Full, Incremental, Differential 
 
     @table
     | Type         | Data Selection                                     | Backup/Restore Time                     | Archive Attribute |
@@ -227,21 +227,62 @@ version: 1.1.1
     | Differential | All data modified since the last full bakcup       | Moderate/Moderate (No more than 2 sets) | Not Cleared       |
     @end
 
-    - NAS vs SAN: SAN is better
-    - Image: doing an image backup, backups everything, including the operating system
+    - $NAS vs SAN$: SAN is better
+    - Image: Doing an image backup, backups everything, including the operating system
 
 *** Resiliency 
-    - Non-persistence: application instaces are constantly built and torn down 
+    - Non-persistence: Application instances are constantly built and torn down 
     - High availability: Always on, always available
-    - Order of restoration: some applications are more important than others
+    - Order of restoration: Some applications are more important than others
 
 *** Embedded Systems 
-    - System on a Chip (SoC): multiple components running on a single chip
-    - Field-programmable gate array (FPGA): An intergrated circuit that can configured
-    - SCADA / ICS: computers on industrial equipment, they are not connected to the internet
+    - System on a Chip (SoC): Multiple components running on a single chip
+    - ,Field-programmable gate array (FPGA),: An intergrated circuit that can be configured
+    - SCADA/ICS: computers on industrial equipment, they are not connected to the internet
     - Internet of Things (IoT)
     - Voice over Internet Protocol (VoIP)
-    - HVAC
-    - Specialized systems: like medical equipment
-    - Real-Time Operating System (RTOS): an operating system with a determninistic processing schedule
+    - HVAC systems
+    - Specialized systems: Like medical equipment
+    - Real-Time Operating System (RTOS): An operating system with a deterministic processing schedule
     - Surveillance systems
+
+**** Embedded Systems Communication 
+     - Narrowband: Signals over a narrow range of frequencies
+     - Baseband: A single cable with a digital signal
+     - Zigbee: IoT networking used for mesh network
+
+*** Physical Security Controls 
+    - Barricades: Prevent access, channel people through, you can also stop large objects like cars
+    - Alarms: Circuit-based, motion detection, panic buttons
+    - Signs 
+    - Video surveillance: CCTV, motion detection
+    - Industrial camouflage: conceal an important facility in plain sight
+    - door access controls 
+    - cable locks
+    - proper lighting 
+    - fencing
+    - fire suppression 
+    - Sensors: Motion detection, noise detection, proximity reader, moisture detection, temperature sensor
+    - Faraday cage: blocks electromagnetic field's
+    - Demilitarized zone (DMZ): Now know as $"screened subnet"$, it adds a layer of security between the internet and you
+    - Protected Distribution System (PDS): Protects the network cables by putting them in-between a metal conduit
+
+*** Secure Areas
+    - Air gap: physical separation between networks, seperate customer infrastructure
+    - Vault: a secure place to keep backup media
+    - Hot and cold aisles: Data centers emit lots of heat, and should be optimize
+
+*** Cryptography 
+    - Plaintext: An unencrypted message
+    - Ciphertext: An encrypted message
+    - Cypher: The algorithm used to encrypt and or decrypt
+
+**** Key stretching 
+     - Key stretching: Sometimes to make a key stronger you perform multiple hashes on a key
+     - Blowfish: unix crypt library to perform multiple hashes
+     - ,Password-Based Key Derivation Function 2 (PBKDF2),: Part of the RSA public key (it is a standard)
+
+**** New cryptography technologies 
+     - Lightweight cryptography: used for IoT devices
+     - Homomorphic encryption (HE): Perform actions on the data without needed to decrypt the data first
+

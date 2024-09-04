@@ -4,7 +4,7 @@ description: Chapter I
 authors: dlaurin
 categories: Security+
 created: 2024-08-09T15:56:53-0500
-updated: 2024-08-09T23:52:44-0500
+updated: 2024-09-03T22:06:58-0500
 version: 1.1.1
 @end
 
@@ -161,6 +161,7 @@ version: 1.1.1
     - Macroviruses
     - Skimming
     - Card cloning: Only works with magnetic stripe, the chip can't be cloned
+    - Juice jacking: using a usb port to charge your device but, transmite data
 
 *** Types of IT Security
     - On-premises data: Full control, system checks can be fast, equipment takes time to setup or update
@@ -275,6 +276,7 @@ version: 1.1.1
     - ,Man-in-the-middle attack,: Sits in the middle and can be able to change information, redirect
     - ARP poisoning: You need to be on a local network
     - Man-in-the-browser: Lets malware do all the proxy work, you are able to see data before it is encrypted
+    - It is now know as $"On-path-attack"$
 
 *** MAC Addresses
     - MAC flooding: Adding too many addresses to a table, attackers can collect network traffic
