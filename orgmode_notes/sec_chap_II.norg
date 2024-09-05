@@ -4,7 +4,7 @@ description: Chapter II
 authors: dlaurin
 categories: Security+ 
 created: 2024-08-09T15:57:51-0500
-updated: 2024-09-03T22:33:47-0500
+updated: 2024-09-05T16:36:31-0500
 version: 1.1.1
 @end
 
@@ -286,3 +286,55 @@ version: 1.1.1
      - Lightweight cryptography: used for IoT devices
      - Homomorphic encryption (HE): Perform actions on the data without needed to decrypt the data first
 
+*** Symmetric and Asymmetric Cryptography 
+**** symmetric encryption 
+     - A single, shared key 
+     - Encrypt wit the key, decrypt with the same key 
+     - If the key is shared to unauthorized user, you need a new key
+     - Symmetric key is dangerous as sending the key through the network is not safe
+
+**** Asymmetric encryption 
+     - Public key: Two or more mathematicaly related keys (key encrypts)
+     - Private key: keep this key safe (key decrypts)
+     - Public key: Anyone can see this key and can be given away
+     - The private key is the only key that can decrypt 
+     - Diffie-Hellman: private key + public key = symmetric key
+
+     ---
+
+    - Elliptic curve cryptography (ECC): It uses curves and needs smaller 
+      storage than prime numbers, best for mobile devices
+
+*** Hashing and Digital Signatures
+    - Hashes: represent data as a short string of text, a message digest, a fingerprint
+    - Hashes are a one way (one-way trip)
+    - intergrity: You can use hashes to make the download is the same
+    - ,Digital signature,: You can add authentication, non-repudiation and integrity to data 
+    - SHA256 algorithm
+    - ,Non-repudiation,: Make sure the data was not changed
+
+**** Passwords
+     - You want to store your passwords in a hash form
+     - Salt: random data added to a password when hashing
+     - Rainbow tables won't work on salted hashes
+
+*** Cryptographic Keys
+    - The private key is very private!
+    - SSL/TLS used one key to encrypts all symmetric keys which is a SPOF
+    - Perfect Forward Secrecy (PFS): Dosen't use the server's private RSA key
+    - PFS uses Elliptic curve or Deffie-Hellman ephemeral: uses for one session
+
+**** Key exchange 
+     - Out-of-band key exchange: send symmetric key through telephone, mail, or in person
+     - In-band key exchange: Use asymmetric encrytion to deliver a symmetic key
+     - Don't need to change the key often (,ephemeral keys,)
+
+***** Share a symetric session key using assymmetic encryption
+      ~ Client encrypts a symmetric key with a server's public key 
+      ~ The server decrypts the shared key and uses it to encrypt data 
+      ~ This is the session key
+
+*** Steganography 
+    - Obfuscation: The process of making something unclear
+    - Steganography: Hide information inside of an image
+    - Covertext: the host file of the steganography
