@@ -4,7 +4,7 @@ description: Chapter II
 authors: dlaurin
 categories: Security+ 
 created: 2024-08-09T15:57:51-0500
-updated: 2024-09-05T16:36:31-0500
+updated: 2024-09-06T17:47:59-0500
 version: 1.1.1
 @end
 
@@ -54,6 +54,7 @@ version: 1.1.1
     - DNS sinkhole: DNS that hands out incorrect IP addresses, and redirect you 
     - You can use it as a security tool to redirect and create a report on the attacks, makes an alarm
 
+** Cloud
 *** Cloud Infrastructure
     - Infrastructure as a Service (IaaS): Giving the hardware required to get your services running
     - Harware as a Service (HaaS): You have more control of your data as you control the hardware 
@@ -76,8 +77,8 @@ version: 1.1.1
     - Edge computing: Process application data on an edge server (no network required)
     - Fog computing: Not having all the data consololidated to the cloud 
     - Thin client: A low powered machine that just remotes into the cloud 
-    - Desktop as a service (Daas): Third-party thin client for the cloud 
-    - Function as A Service (FaaS): Applications are seperated into autonomous functions
+    - Desktop as a Service (DaaS): Third-party thin client for the cloud 
+    - Function as a Service (FaaS): Applications are seperated into autonomous functions
     - Virtual Private Cloud (VPC): different pool of ressources/application have their own cloud 
     - VPC communicate to a transit gateway, a "cloud router" and connect with a VPN
     - Ressource policies 
@@ -145,10 +146,11 @@ version: 1.1.1
      - Making it that attack will only work on a fraction of the users
 
 *** Automation 
-    - ,Continuous intergration (CI),: Code is constantly written, which causes security problems
-    - Continous delivery (CD): Automate the testing process 
+    - ,Continuous Intergration (CI),: Code is constantly written, which causes security problems
+    - Continous Delivery (CD): Automate the testing process 
     - Continuous deployment: Automatically deploy code to production
 
+** Authentication
 *** Authentication Methods 
     - Directory services: Keeping all users in a single database
     - $Kurberos vs LDAP$
@@ -185,7 +187,8 @@ version: 1.1.1
      - Something you exhibit
      - Someone you know
 
-*** Redundancy
+** Redundancy
+*** Redundancy terminology
     - Duplicate parts of the system 
     - Maintain uptime 
     - Making sure the hardware, software and systems are always available 
@@ -237,7 +240,7 @@ version: 1.1.1
 
 *** Embedded Systems 
     - System on a Chip (SoC): Multiple components running on a single chip
-    - ,Field-programmable gate array (FPGA),: An intergrated circuit that can be configured
+    - ,Field-Programmable Gate Array (FPGA),: An intergrated circuit that can be configured
     - SCADA/ICS: computers on industrial equipment, they are not connected to the internet
     - Internet of Things (IoT)
     - Voice over Internet Protocol (VoIP)
@@ -264,15 +267,16 @@ version: 1.1.1
     - fire suppression 
     - Sensors: Motion detection, noise detection, proximity reader, moisture detection, temperature sensor
     - Faraday cage: blocks electromagnetic field's
-    - Demilitarized zone (DMZ): Now know as $"screened subnet"$, it adds a layer of security between the internet and you
-    - Protected Distribution System (PDS): Protects the network cables by putting them in-between a metal conduit
+    - Demilitarized Zone (DMZ): Now know as $"screened subnet"$, it adds a layer of security between the internet and you
+    - ,Protected Distribution System (PDS),: Protects the network cables by putting them in-between a metal conduit
 
 *** Secure Areas
     - Air gap: physical separation between networks, seperate customer infrastructure
     - Vault: a secure place to keep backup media
     - Hot and cold aisles: Data centers emit lots of heat, and should be optimize
 
-*** Cryptography 
+** Cryptography
+*** Cryptography terminology
     - Plaintext: An unencrypted message
     - Ciphertext: An encrypted message
     - Cypher: The algorithm used to encrypt and or decrypt
@@ -296,9 +300,9 @@ version: 1.1.1
 **** Asymmetric encryption 
      - Public key: Two or more mathematicaly related keys (key encrypts)
      - Private key: keep this key safe (key decrypts)
-     - Public key: Anyone can see this key and can be given away
+     - Public key is that anyone can see this key and can be given away
      - The private key is the only key that can decrypt 
-     - Diffie-Hellman: private key + public key = symmetric key
+     - ,Diffie-Hellman,: private key + public key = symmetric key
 
      ---
 
@@ -338,3 +342,23 @@ version: 1.1.1
     - Obfuscation: The process of making something unclear
     - Steganography: Hide information inside of an image
     - Covertext: the host file of the steganography
+
+*** Stream and Block Ciphers 
+    - Stream ciphers: encryption that is done one bit or byte at a time, best for low hardware 
+    - Used with symmetric encryption, because the added overhead of asymmetric encryption
+
+    - Block ciphers: encrypt a fixed-length blocks, 
+    - Used with symmetric encryption also
+
+**** Mode of operations
+     - mode of operation: defines the method of encryption
+     - Electronic Codebook (ECB): Each plaintext block gets encrypted by the same key, it is the simplest encryption
+     - Cipher Block Chaining (CBC): Each plaintext block is XOR-ed with the previous ciphertext block making sure it is different
+     - Initialization Vector (IV): Adds additional randomization at the first block
+     - Counter (CTR): encryption that uses a counter to add randomization and XOR is performed on the plaintext instead
+     - Galois/Counter Mode (GCM): Encryption with authentication that uses CBC + CTR mode and GCM
+     - Used by packetized data (SSH, TLS, IPsec, Wireless)
+
+     ===
+___
+
