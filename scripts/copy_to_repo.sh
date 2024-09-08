@@ -10,6 +10,7 @@ destination="/home/dlaurin/IT/security_plus_701_study_guide/orgmode_notes/"
 files=(
   "sec_chap_I.norg"
   "sec_chap_II.norg"
+  "sec_chap_III.norg"
   "sec_index.norg"
   "sec_study_guide.norg"
   "sec_study_tracker.norg"

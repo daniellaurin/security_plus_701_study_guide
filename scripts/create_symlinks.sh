@@ -13,6 +13,7 @@ files=(
   "sec_study_tracker.norg"
   "sec_chap_I.norg"
   "sec_chap_II.norg"
+  "sec_chap_III.norg"
 )
 
 # Create symbolic links

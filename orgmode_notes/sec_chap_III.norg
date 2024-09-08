@@ -1,0 +1,70 @@
+@document.meta
+title: sec_chap_III
+description: Chapter III
+authors: dlaurin
+categories: Security+
+created: 2024-09-06T17:41:27-0500
+updated: 2024-09-07T23:16:19-0500
+version: 1.1.1
+@end
+
+* Chapter III 
+
+*** Secure Protocols
+
+**** Secure VoIP
+     - Secure Real-Time Transport Protocol (SRTP): Used for VoIP
+     - Uses AES for encryption 
+     - Also uses HMAC-SHA1 for authentication, integrity, and replay protection
+
+**** Secure NTP
+     - Network Time Protocol (NTP): NTP would get DDoS by an amplification attack, now we use NTPsec
+
+**** Secure Email
+     - Secure/Multipurpose Internet Mail Extensions (S/MIME): Public key encryption and digital signing of mail content
+     - POP3: Use a STARTTLS extension to encrypt emails with SSL
+     - IMAP: Use SSL to also encrypt for emails
+
+**** Secure Web
+     - Secure Sockets Layer/Transport Layer Security (SSL/TLS):
+     - HTTP Secure (HTTPS): Uses public key encryption, private key on the server, 
+       symmetric session key is transferred using asymmetric encryption
+
+**** Secure Tunnel
+     - Internet Protocol Security (IPsec): Used as a tunnel and does authentication, encryption and packet signing
+***** Two core IPsec protocols 
+      - Authenticaiton Header (AH)
+      - Encapsulation Security Payload (ESP)
+
+**** Secure File Transfer
+     - File Transfer Protocol Secure (FTPS)
+     - SSH File Transfer Protocol (SFTP): You can manipulate and control the files too (FileZilla)
+
+**** Directory 
+     - Lightweight Directory Access Protocol (LDAP): Protocol for reading and writing directories over an IP network
+     - X.500 is a standardized directory
+     - LDAP is the protocol uses to query and update and X.500 directory
+     - LDAPS: Non-standard LDAP that uses SSL encryption
+     - Simple Authentication and Security Layer (SASL): Provides authentication using Kerberos
+
+**** Remote Access 
+     - Secure Shell (SSH): Encrypted terminal communication 
+     - It replaces Telnet 
+
+**** Secure DNS 
+     - Relatively easy to poison a DNS
+     - Domain Name System Security Extensions (DNSSEC): Origin authentication, data integrity
+     - Public key cryptography: DNS records are signed with a trusted third party
+
+**** Routing and switching 
+     - Use SSH to remote-in
+     - Simple Network Management Protocol version 3 (SNMPv3): If use query your router you use this protocol 
+     - And the protocol CIA trifecta utility 
+     - If your configuring through web browser you use HTTPS 
+
+**** Dynamic Addressing 
+     - DHCP does not include any built-in security and does not have a "secure" version of it
+     - To avoid rogue DHCP servers, you can use AD as it can authorize devices that wants to act a DHCP's on your network
+     - DHCP Snooping: swithes can be configured that it monitors for DHCP requests
+     - ,Starvation attack,: spoof a MAC addresses to exhaust the DHCP pool
+
