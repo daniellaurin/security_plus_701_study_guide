@@ -4,7 +4,7 @@ description: Chapter III
 authors: dlaurin
 categories: Security+
 created: 2024-09-06T17:41:27-0500
-updated: 2024-09-07T23:16:19-0500
+updated: 2024-09-08T00:34:03-0500
 version: 1.1.1
 @end
 
@@ -68,3 +68,44 @@ version: 1.1.1
      - DHCP Snooping: swithes can be configured that it monitors for DHCP requests
      - ,Starvation attack,: spoof a MAC addresses to exhaust the DHCP pool
 
+*** Endpoint Protection 
+    - Defense in depth: Protection is multi-faceted
+    - Anti-virus
+    - ,signatures,: set pattern within the file or memory caused by the malicious software like buffer overflows
+    - Heuristics: detecting large changes like registry updates
+    - Behavioral: When something happens out of the ordinary like writing files to the windows folder
+    - Endpoint detection and response (EDR): Detect a threat with behavioral analysis, machine learning, process monitoring
+
+    - Next-generation firewall (NGFW): It identifies the application going across the network to prevent DLP
+    - Host-based firewall: Software-based firewall, allows or disallow incoming or outgoing application traffic
+    - Host-based Intrusion Detection System (HIDS): Uses log files to identify intrusions and can change the firewall rules 
+    - Host-based Intrusion Prevention System (HIPS): Recognize and block know attacks
+    - HIPS identification: checks for signatures, heuristics and behavioral
+
+*** Boot integrity
+    - ,A chain of trust,: validating each component of hardware and software, root to endpoint
+    - Chain of trust of boot process: Secure boot, trusted boot, and measured boot 
+
+    - Trusted Platform Module (TPM): Hardware to help with encryption functions, store keys, 
+    - Root of trust: Trust your hardware with a TPM
+    - UEFI BIOS Secure Boot: Checks the bootloader's digital signature and sign a trusted certificate
+    - Trusted Boot: Checks the digital signature of the OS kernel, boot drivers and runs ELAM
+    - Early Launch Anti-Malware (ELAM): Checks every driver to see if it's trusted
+    - Measured boot: You check if there is no malware infection, UEFI stores a hash of all your computer to diagnose
+    - Remote attestation: Provide a verification report to attestation server
+
+*** Database Security 
+    - Tokenization: replace sensitive data with a non-sensitive placeholder
+    - Hashes
+    - Salt
+
+*** Application Security 
+    - QA
+    - Input validation 
+    - Normalization: check and correct all inputs for user (like a zip code)
+    - Dynamic analysis (fuzzing): send rnadom input to an application seeing if it will break
+    - Cookies: used for tracking, personlization, session management
+    - HTTPs Headers: Like web hardening, enforce https, only allow locat site scripts, pervent iframe
+    - Code signing: Running a digital signature for code
+    - Allow list/deny list of application's 
+    - Static Application Security Testing (SAST): Help to identify security flaws in the code
