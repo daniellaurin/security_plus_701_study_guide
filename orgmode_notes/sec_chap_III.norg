@@ -109,3 +109,13 @@ version: 1.1.1
     - Code signing: Running a digital signature for code
     - Allow list/deny list of application's 
     - Static Application Security Testing (SAST): Help to identify security flaws in the code
+
+*** Application Hardening 
+    - Close every port 
+    - Control access with a firewall (NGFW)
+    - Registry: configure registry permissions
+    - ,Full Disk encryption (FDE),: Encrypt everything on the drive (BitLocker) 
+    - Self-encrypted drive (SED): Hardware-based full disk encryption
+    - OS hardening: update, user account management, network access, anti-virus
+    - Sandboxing: VM, mobile devices, iframes, UAC
+
