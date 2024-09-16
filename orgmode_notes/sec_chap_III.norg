@@ -71,19 +71,19 @@ version: 1.1.1
 *** Endpoint Protection 
     - Defense in depth: Protection is multi-faceted
     - Anti-virus
-    - ,signatures,: set pattern within the file or memory caused by the malicious software like buffer overflows
-    - Heuristics: detecting large changes like registry updates
+    - ,Signatures,: Set pattern within the file or memory caused by the malicious software, like buffer overflows
+    - Heuristics: Detecting large changes like registry updates
     - Behavioral: When something happens out of the ordinary like writing files to the windows folder
-    - Endpoint detection and response (EDR): Detect a threat with behavioral analysis, machine learning, process monitoring
+    - Endpoint Detection and Response (EDR): Detect a threat with behavioral analysis, machine learning, process monitoring
 
-    - Next-generation firewall (NGFW): It identifies the application going across the network to prevent DLP
+    - Next-generation Firewall (NGFW): It identifies the application going across the network to prevent DLP
     - Host-based firewall: Software-based firewall, allows or disallow incoming or outgoing application traffic
     - Host-based Intrusion Detection System (HIDS): Uses log files to identify intrusions and can change the firewall rules 
     - Host-based Intrusion Prevention System (HIPS): Recognize and block know attacks
     - HIPS identification: checks for signatures, heuristics and behavioral
 
 *** Boot integrity
-    - ,A chain of trust,: validating each component of hardware and software, root to endpoint
+    - ,A chain of trust,: Validating each component of hardware and software, root to endpoint
     - Chain of trust of boot process: Secure boot, trusted boot, and measured boot 
 
     - Trusted Platform Module (TPM): Hardware to help with encryption functions, store keys, 
@@ -95,17 +95,17 @@ version: 1.1.1
     - Remote attestation: Provide a verification report to attestation server
 
 *** Database Security 
-    - Tokenization: replace sensitive data with a non-sensitive placeholder
+    - Tokenization: Replace sensitive data with a non-sensitive placeholder
     - Hashes
     - Salt
 
 *** Application Security 
     - QA
     - Input validation 
-    - Normalization: check and correct all inputs for user (like a zip code)
-    - Dynamic analysis (fuzzing): send rnadom input to an application seeing if it will break
+    - Normalization: Check and correct all inputs for user (like a zip code)
+    - Dynamic analysis (fuzzing): send random input to an application seeing if it will break
     - Cookies: used for tracking, personlization, session management
-    - HTTPs Headers: Like web hardening, enforce https, only allow locat site scripts, pervent iframe
+    - HTTPs Headers: Like web hardening, enforce https, only allow local site scripts, prevent iframe
     - Code signing: Running a digital signature for code
     - Allow list/deny list of application's 
     - Static Application Security Testing (SAST): Help to identify security flaws in the code
@@ -113,9 +113,34 @@ version: 1.1.1
 *** Application Hardening 
     - Close every port 
     - Control access with a firewall (NGFW)
-    - Registry: configure registry permissions
+    - Registry: Configure registry permissions
     - ,Full Disk encryption (FDE),: Encrypt everything on the drive (BitLocker) 
     - Self-encrypted drive (SED): Hardware-based full disk encryption
-    - OS hardening: update, user account management, network access, anti-virus
+    - OS hardening: Update, user account management, network access, anti-virus
     - Sandboxing: VM, mobile devices, iframes, UAC
+
+*** Network Segmentation 
+    - VLAN, DMZ, zero-trust, air-gap
+    - Intranet: A private network for partners, usually requires additional auth
+    - East-West traffic: Traffic between devices in the same data center 
+    - North-South traffic: Inbound or outbound from the data center, usually from untrusted devices
+
+*** Virtual Private Network
+    - Full tunnel: All of the data goes through the encrypted tunnel by the VPN concentrator
+    - Split tunnel: devices that are not on the corporate network, it does not need to go through the tunnel
+    - Site-to-Site VPN: VPN communicating firewall to firewall
+    - Layer 2 Tunneling Protocol (L2TP): connecting sites over a layer 3 network, that uses IPsec
+
+*** Physical Port Security 
+    - broadcasts, STP, BPDU guard with cisco port fast 
+    - DHCP snooping
+    - MAC filtering 
+
+*** Secure Networking 
+    - Sinkhole address: stop end users from visiting dangerous sites, by redirecting to the correct one 
+    - Can also act as content filtering 
+    - Out-of-band management: If the network is not availablewith can connect to the comm server on a router 
+      and choose where you want to go on the network 
+    - QoS, IPv6, Network tap, SoC
+    - File Integrity Monitoring (FIM): If some files changed and are not meant to change
 

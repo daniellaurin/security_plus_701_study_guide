@@ -40,6 +40,7 @@ version: 1.1.1
      - Industry-related sites 
      - Infect all visitors (but you're looking for a specific victim)
      - Prevention: Use next-gen firewall and IPS 
+     - ,Intrusion Prevention Detection, (IPS)
 
 *** Spam
     - Spam: Unsolicited messages
@@ -327,7 +328,7 @@ version: 1.1.1
     - Cloud attack: Misconfiguration, brute force, phishing, orchestration attack (make your attack vector use resources), DoS
 
 *** Threat Intelligence
-    - ,Open-Source Intelligence, (OSINT): 
+    - $Open-Source Intelligence$ (OSINT): 
 
 **** Vulnerability databases
      - Common Vulnerabilities and Exposures (CVE): Made by Homeland Security 
