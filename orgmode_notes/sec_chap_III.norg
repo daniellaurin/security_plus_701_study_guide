@@ -4,7 +4,7 @@ description: Chapter III
 authors: dlaurin
 categories: Security+
 created: 2024-09-06T17:41:27-0500
-updated: 2024-09-08T00:34:03-0500
+updated: 2024-09-17T15:59:15-0500
 version: 1.1.1
 @end
 
@@ -143,4 +143,103 @@ version: 1.1.1
       and choose where you want to go on the network 
     - QoS, IPv6, Network tap, SoC
     - File Integrity Monitoring (FIM): If some files changed and are not meant to change
+
+
+*** Firewalls 
+    - Stateless firewall: Does not keep track of traffic flows (legacy firewall)
+    - Statefull firewall: Statefull firewalls remember the "state" of the session (you only need 1 rule)
+    - Unified Threat Management (UTM): they are all in one IT device
+    - Web application firewall (WAF): applices rules to HTTPS servers 
+    - Access Control List (ACL): allow or disallow traffic based on tuples
+    - Implicit deny: If none of the firewalls match an ACL in the rules, it just denies it 
+
+*** Network Access Control 
+    - Posture Assessment: You can't trust everyone's computer
+
+**** Health checks/ Posture Assessment
+     - Persistent agents: Permanently installed onto a system 
+     - Dissolvable agents: Non permenant piece of software for ACL
+     - Agentless NAC: Integrated in Active Directory, checks are made on log on & off 
+
+     ---
+
+    - Failing your Assessment: When a device fails, the device goes into quarantine network and notifies and admin
+
+*** Proxy servers 
+    - Proxy: Sits between the users and the external network
+    - Explicit Proxy: letting the applications know were is the proxy
+    - Transparent Proxy: The proxy is invisible and sitting in the middle of the conversation
+
+    - Internal Proxy: Commonly used to protect and control user access to the internet
+      user => proxy => internet 
+
+    - Reverse Proxy: Inbound traffic form the internet to your internal service 
+      internet => proxy => server
+
+    - Open proxy: third party proxy 
+
+
+*** Intrusion Prevention 
+    - IDS/IPS
+    - Passive monitoring: examines a copy of the traffic 
+    - Out-of-band response: when malicious traffic detected, IPS resets the frame 
+    - In-band response: when malicious traffice detected, it blocks traffic 
+
+*** Other network appliances 
+    - Jump server: A single device you ssh/tunnel/rdp in that is inside your private network
+    - Hardware Security Module (HSM): High-end cyrptographic hardware box 
+    - Aggregate, Sensors, Collectors
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

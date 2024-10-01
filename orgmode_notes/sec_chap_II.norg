@@ -154,7 +154,7 @@ version: 1.1.1
 *** Authentication Methods 
     - Directory services: Keeping all users in a single database
     - $Kurberos vs LDAP$
-    - Federaton: Using third-party credentials to authenticate yourself
+    - ,Federaton,: Using third-party credentials to authenticate yourself
     - Attestation: Making sure that it is the approved hardware to connect to the network
     - Short Message Service (SMS)
     - Push notification
