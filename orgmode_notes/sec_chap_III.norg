@@ -163,11 +163,11 @@ version: 1.1.1
 
      ---
 
-    - Failing your Assessment: When a device fails, the device goes into quarantine network and notifies and admin
+    - Failing your Assessment: When a device fails, the device goes into quarantine network and notifies an admin
 
 *** Proxy servers 
     - Proxy: Sits between the users and the external network
-    - Explicit Proxy: letting the applications know were is the proxy
+    - Explicit Proxy: Letting the applications know where is the proxy
     - Transparent Proxy: The proxy is invisible and sitting in the middle of the conversation
 
     - Internal Proxy: Commonly used to protect and control user access to the internet
@@ -176,14 +176,14 @@ version: 1.1.1
     - Reverse Proxy: Inbound traffic form the internet to your internal service 
       internet => proxy => server
 
-    - Open proxy: third party proxy 
+    - Open proxy: Third party proxy 
 
 
 *** Intrusion Prevention 
     - IDS/IPS
-    - Passive monitoring: examines a copy of the traffic 
-    - Out-of-band response: when malicious traffic detected, IPS resets the frame 
-    - In-band response: when malicious traffice detected, it blocks traffic 
+    - Passive monitoring: Examines a copy of the traffic 
+    - Out-of-band response: When malicious traffic detected, IPS resets the frame 
+    - In-band response: When malicious traffice detected, it blocks traffic 
 
 *** Other network appliances 
     - Jump server: A single device you ssh/tunnel/rdp in that is inside your private network
@@ -191,13 +191,13 @@ version: 1.1.1
     - Aggregate, Sensors, Collectors
 
 *** Wireless Cryptography 
-    - Encrypt the wireless date to make it confidential 
+    - Encrypt the wireless data to make it confidential 
     - Authenticate the users before granting access 
-    - Message inegrity check (MIC): Checking the integrity of the wireless signal
+    - Message Integrity Check (MIC): Checking the integrity of the wireless signal
 
 **** Wireless Security Protcols
      - WPA2: uses CCMP block cipher mode 
-     - CCMP block cipher mode
+     - Counter/CBC-MAC Protocol: That is the type of CCMP WPA2 uses
      - Data confidentiality with AES 
      - MIC with CBC-MAC 
 
@@ -209,14 +209,53 @@ version: 1.1.1
     ~ Capture the hash 
     ~ brute-force the PSK 
 
-    WPA3 changes PSK authentication: 
-    - Mutual authentication: both nodes can auth each other 
-    - Shared session key: no more key going through the network 
-    - No hashes, four-way handshake, no brute force vector
-    - Perfect forward secrecy: Key changes often and the everyone has a different session key
+    - WPA3 changes PSK authentication: 
+    -- Mutual authentication: Both nodes can auth each other 
+    -- Shared session key: No more key going through the network 
+    -- No hashes, Four-way handshake, no brute force vector
+    -- Perfect forward secrecy: Key changes is often and the everyone has a different session key
 
     - $Simultaneous Authentication of Equals (SAE)$: Diffie-Hellman key exchange
 
+*** Wireless Authentication Methods
+    - Shared password / PSK: Usually for home network use 
+    - Centralized authentication (802.1X): When your asked to login with your credentials and will be denied network access until successful | WPA2-Enterprise
+    - WPA3-Enterprise: Uses a centralized authentication server (ex: TACAS, RADIUS)
+    - Captive portal: Login portal that prompts login info, with session expiry
+    - Wi-Fi protected setup (WPS): Asks for AP PIN, NFC or button to authentication (it's the "easy" way)
+    - WPS should be disabled on AP's
+
+*** Wireless Authentication Protocols
+    - Extensible Authentication Protocol (EAP): Authentication framework with 802.1X
+    - Port-based Network Access Control (NAC): You don't get access until you pass auth (wired & wireless)
+    - Used with RADIUS, LDAP, TACAS+
+    - RADIUS Federation: Can authenticate to the network of another org (like a different campus)
+    - RADIUS backend + EAP to auth
+
+**** Understanding EAP 
+     - Supplicant - the client 
+     - Authenticator - the device that provides access 
+     - Authentication Server (AS) - validates the client credentials
+     - Protected Access Credentials (PAC): Shared secret
+
+***** EAP-FAST
+      - Flexible authentication via secure tunneling 
+      ~ AS and supplicant share a PAC
+      ~ Supplicant and AS auth and makes TLS tunnel 
+      ~ Talks to the RADIUS database
+
+***** PEAP: 
+      - Protected Extensible Authentication Protocol (PEAP)
+      - AS uses digital certificate + TLS instead of a PAC 
+      - Generic Token Card (GTC): A token generator to auth
+      - You can also use Microsoft MS-CHAPv2 || GTC
+
+
+***** EAP-TLS
+      - Stronger security, more common 
+      - requires digital cert on the AS and all devices
+      - ,Public key infrastrucutre (PKI),: A way to manage, revoke supplicant certificates
+      - EAP Tunneled Transport Layer Security (EAP-TTLS): Only requires one digital certificate from the AS
 
 
 
