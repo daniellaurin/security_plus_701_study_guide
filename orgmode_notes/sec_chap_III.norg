@@ -190,6 +190,36 @@ version: 1.1.1
     - Hardware Security Module (HSM): High-end cyrptographic hardware box 
     - Aggregate, Sensors, Collectors
 
+*** Wireless Cryptography 
+    - Encrypt the wireless date to make it confidential 
+    - Authenticate the users before granting access 
+    - Message inegrity check (MIC): Checking the integrity of the wireless signal
+
+**** Wireless Security Protcols
+     - WPA2: uses CCMP block cipher mode 
+     - CCMP block cipher mode
+     - Data confidentiality with AES 
+     - MIC with CBC-MAC 
+
+     - WPA3: uses GCMP block cipher mode instead 
+
+     ---
+
+    - WPA2 has a PSK brute-force problem, where an attacker can listen to the four-way handshake 
+    ~ Capture the hash 
+    ~ brute-force the PSK 
+
+    WPA3 changes PSK authentication: 
+    - Mutual authentication: both nodes can auth each other 
+    - Shared session key: no more key going through the network 
+    - No hashes, four-way handshake, no brute force vector
+    - Perfect forward secrecy: Key changes often and the everyone has a different session key
+
+    - $Simultaneous Authentication of Equals (SAE)$: Diffie-Hellman key exchange
+
+
+
+
 
 
 
