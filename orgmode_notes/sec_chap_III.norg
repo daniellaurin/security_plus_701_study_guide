@@ -250,12 +250,25 @@ version: 1.1.1
       - Generic Token Card (GTC): A token generator to auth
       - You can also use Microsoft MS-CHAPv2 || GTC
 
-
 ***** EAP-TLS
       - Stronger security, more common 
       - requires digital cert on the AS and all devices
       - ,Public key infrastrucutre (PKI),: A way to manage, revoke supplicant certificates
       - EAP Tunneled Transport Layer Security (EAP-TTLS): Only requires one digital certificate from the AS
+
+*** Mobile Networks 
+    - Point-to-Point (P2P): Conversation between two devices 
+    - Point-to-multipoint (P2MP): multiple devices communicate to a multi-point 
+    - PAN, RFID, NFC, 802.11X, GPS
+
+*** Mobile Device Management
+    - Bring Your Own Device (BYOD): To manage you can: set policies, access control, centralizing device management 
+    - Allow list on apps with an MDM 
+    - Mobile Content Management (MCM): Protect data, manage file sharing, DLP 
+    - Geofencing: retrict or allow features when the devie is in a particular area 
+    - Context-aware authentication: ip address, gps info, paired bluetooth devices: to built a profile on who is trying to auth
+    - Full Device Encryption (FDE): it uses a lot of CPU and eats up the battery, and backing up the recovery key
+
 
 
 
